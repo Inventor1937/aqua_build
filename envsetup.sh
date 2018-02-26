@@ -664,8 +664,9 @@ function lunch()
       unset TARGET_PLATFORM_VERSION
     fi
     export TARGET_BUILD_TYPE=release
+    export NINJA=$(get_build_var NINJA)
     export SDCLANG=true
-    export SDCLANG_PATH=$(gettop)/vendor/qcom/sdclang/bin
+    export SDCLANG_PATH=$(gettop)/vendor/qcom/sdclang/6.0.4/prebuilt/linux-x86_64/bin
     export SDCLANG_PATH_2=$(gettop)/vendor/qcom/sdclang/bin
     export SDCLANG_LTO_DEFS=$(gettop)/vendor/benzo/sdclang/sdllvm-lto-defs.mk
     export SDCLANG_CONFIG="$(gettop)/vendor/qcom/sdclang/sdclang.json"
