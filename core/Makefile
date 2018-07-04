@@ -2194,6 +2194,7 @@ build_ota_package := true
 endif
 
 ifeq ($(build_ota_package),true)
+$(shell cp $(FEC) $(HOST_OUT_EXECUTABLES)/fec)
 OTATOOLS :=  $(HOST_OUT_EXECUTABLES)/minigzip \
   $(HOST_OUT_EXECUTABLES)/aapt \
   $(HOST_OUT_EXECUTABLES)/adb \
